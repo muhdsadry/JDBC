@@ -54,7 +54,7 @@ public class Deletion extends HttpServlet{
 			    }
 			  } else{
 				// if login and password are destroyed in session.
-			       RequestDispatcher dispatch = request.getRequestDispatcher("form.jsp?error=2");  
+			       RequestDispatcher dispatch = request.getRequestDispatcher("form.jsp?error=2");
 		           dispatch.forward(request, response);   
 			  }
 		}
