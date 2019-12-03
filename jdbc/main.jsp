@@ -43,7 +43,7 @@ Welcome <%=bean.getLogin()%><br>
            String sql = "";
            int count = 0;
            Class.forName("com.mysql.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","root","msas@MYSQL77");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","DBlogin","DBpassword");
            sql="SELECT recordID, name, matricno FROM registration";
            Statement statement = con.createStatement();                
            ResultSet resultSet = statement.executeQuery(sql);
