@@ -56,6 +56,6 @@ public class Validation extends HttpServlet{
 		
 		// call doPost if user try to key in controller inside the URL location
 		public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			doPost(request, response);
+			doPost(request, response); 
 		}
 }
