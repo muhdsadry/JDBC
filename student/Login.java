@@ -34,7 +34,7 @@ public class Login {
 		   //setup database connection
            String sql = "";
            Class.forName("com.mysql.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","root","msas@MYSQL77");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","DBlogin","DBpassword");
            sql="SELECT login, password FROM user";
            Statement statement = con.createStatement();                
            ResultSet resultSet = statement.executeQuery(sql);
