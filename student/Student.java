@@ -141,7 +141,7 @@ public class Student {
 	        {
 	           String sql = "";
 	           Class.forName("com.mysql.jdbc.Driver");
-	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","root","msas@MYSQL77");
+	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","DBlogin","DBpassword");
 	           sql="INSERT INTO registration (name, icno, address, country, phone, email, matricno, cgpa, major, mahallah) VALUES (?,?,?,?,?,?,?,?,?,?)";
 	           PreparedStatement statement = con.prepareStatement(sql);                
 	           statement.setString(1, getFullName());
@@ -170,7 +170,7 @@ public class Student {
 	        {
 	           String sql = "";
 	           Class.forName("com.mysql.jdbc.Driver");
-	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","root","msas@MYSQL77");
+	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","DBlogin","DBpassword");
 	           sql="DELETE FROM registration WHERE recordID = ?";
 	           PreparedStatement statement = con.prepareStatement(sql);                
 	           statement.setInt(1, id);
@@ -190,7 +190,7 @@ public class Student {
 	        {
 	           String sql = "";
 	           Class.forName("com.mysql.jdbc.Driver");
-	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","root","msas@MYSQL77");
+	           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dev?autoReconnect=true&useSSL=false","DBlogin","DBpassword");
 	           sql="UPDATE registration SET name = ?, icno = ?, address = ?, country = ?, phone = ?, email = ?, matricno = ?, cgpa = ?, major = ?, mahallah = ? WHERE recordID = ?";
 	           PreparedStatement statement = con.prepareStatement(sql);                
 	           statement.setString(1, getFullName());
